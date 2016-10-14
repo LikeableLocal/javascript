@@ -1511,36 +1511,6 @@ Other Style Guides
     // the same applies for `const`
     ```
 
-  <a name="variables--unary-increment-decrement"></a><a name="13.6"></a>
-  - [13.6](#variables--unary-increment-decrement) Avoid using unary increments and decrements (++, --). eslint [`no-plusplus`](http://eslint.org/docs/rules/no-plusplus)
-
-    > Why? Per the eslint documentation, unary increment and decrement statements are subject to automatic semicolon insertion and can cause silent errors with incrementing or decrementing values within an application. It is also more expressive to mutate your values with statements like `num += 1` instead of `num ++`. Disallowing unary increment and decrement statements also prevents you from pre-incrementing/pre-decrementing values unintentionally which can also cause unexpected behavior in your programs.
-
-    ```javascript
-      // bad
-
-      let array = [1, 2, 3];
-      let num = 1;
-      let increment = num ++;
-      let decrement = -- num;
-
-      for(let i = 0; i < array.length; i++){
-        let value = array[i];
-        ++value;
-      }
-
-      // good
-
-      let array = [1, 2, 3];
-      let num = 1;
-      let increment = num += 1;
-      let decrement = num -= 1;
-
-      array.forEach((value) => {
-        value += 1;
-      });
-    ```
-
 **[⬆ back to top](#table-of-contents)**
 
 
@@ -1955,7 +1925,7 @@ Other Style Guides
 ## Whitespace
 
   <a name="whitespace--spaces"></a><a name="18.1"></a>
-  - [18.1](#whitespace--spaces) Use soft tabs set to 2 spaces. eslint: [`indent`](http://eslint.org/docs/rules/indent.html) jscs: [`validateIndentation`](http://jscs.info/rule/validateIndentation)
+  - [18.1](#whitespace--spaces) Use soft tabs set to 4 spaces. eslint: [`indent`](http://eslint.org/docs/rules/indent.html) jscs: [`validateIndentation`](http://jscs.info/rule/validateIndentation)
 
     ```javascript
     // bad
